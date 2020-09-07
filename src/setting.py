@@ -8,16 +8,22 @@
 @time: 2020/8/18 9:35
 """
 class OPT(object):
-    GPU = False
+    GPU = True
     TEXT_NAME = "config/text.jpg"
     with open("config/characters.txt", 'r', encoding='utf-8') as fr:
         CHARACTERS = fr.read().replace('\n', "")
 
+
 """预测模块参数"""
 class yolo_opt(OPT):
-    model_def = "config/yolov3-tiny.cfg"
     class_path = "config/classes.names"
+
+    model_def = "config/yolo3.cfg"
     weights_path = "model/yolov3_ckpt.pth"
+
+    # 使用yolo tiny  速度快  检测准确率降低
+    # model_def = "config/yolov3-tiny.cfg"
+    # weights_path = "model/yolov3_ckpt_tiny.pth"
 
     # 一些参数
     img_size = 416

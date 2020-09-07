@@ -3,3 +3,14 @@
 __pycache__/
 bilbil.jpg
 tes.py
+text_image1/
+text_image2/
+text_image3/
+error/
+demo.py
+model/*.pth
+model/*.klm
+error2/
+model.zip
+dowlond.py
+a.py
